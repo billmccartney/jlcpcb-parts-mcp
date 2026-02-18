@@ -1,26 +1,26 @@
 # JLCPCB Parts MCP Server
 
-## これは何
+## What is this
 
-JLCPCBのPCBA向けの、部品探しを補助するMCPサーバーです。
+An MCP server that assists with finding parts for JLCPCB's PCBA (PCB Assembly) service.
 
-## 会話例
+## Example conversation
 
-Basic Partsに分類されている、フェライトビーズを検索した例です。
-![会話例](images/sample_conversation.png)
+Here is an example of searching for ferrite beads classified as Basic Parts.
+![Example conversation](images/sample_conversation.png)
 
-また、以下のページでは降圧型DC-DCコンバータの抵抗値の選定を行っています。
+Additionally, the following page demonstrates selecting resistor values for a buck DC-DC converter.
 https://claude.ai/share/9f02f1a4-7b38-48fb-b29a-f10cf1e608ba
 
-## 設定
+## Setup
 
-データベースとして、[JLC PCB SMD Assembly Component Catalogue](https://github.com/yaqwsx/jlcparts)を使用しています。
-ここで分割ZIPにして提供されている `cache.sqlite3` が必要です。2025年4月現在、番号は `cache.z19` まで存在します。
+This server uses the [JLC PCB SMD Assembly Component Catalogue](https://github.com/yaqwsx/jlcparts) as its database.
+You will need the `cache.sqlite3` file provided there as split ZIP files. As of April 2025, the files go up to `cache.z19`.
 
-PythonでMCPが利用可能な環境を作り、サーバーとして `server.py` を指定してください。
-また、データベースへのパスを `JLCPCB_DB_PATH` 環境変数へ設定する必要があります。
+Set up a Python environment where MCP is available, and specify `server.py` as the server.
+You also need to set the `JLCPCB_DB_PATH` environment variable to the path of the database.
 
-Claude Desktopでの設定例を以下に示します。
+Below is an example configuration for Claude Desktop.
 
 ```json
 {
