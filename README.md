@@ -1,5 +1,7 @@
 # JLCPCB Parts MCP Server
 
+Originally created by [@nvsofts](https://github.com/nvsofts).
+
 ## What is this
 
 An MCP server that assists with finding parts for JLCPCB's PCBA (PCB Assembly) service.
